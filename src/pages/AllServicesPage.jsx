@@ -22,24 +22,24 @@ export default function AllServicesPage() {
 
   const services = [
     {
-      id: "cloud-finops",
-      title: "Cloud & AI FinOps",
+      id: "cloud-ai",
+      title: "Cloud & AI Management Platform",
       image: cloudImage,
       desc: [
-        "Our Advanced Cloud & AI FinOps services take cloud cost optimization to the next level with cutting-edge AI-driven analytics and predictive modeling.",
+        "Our Advanced Cloud & AI Management Platform services take cloud cost optimization to the next level with cutting-edge AI-driven analytics and predictive modeling.",
         "Beyond basic cost management, our advanced services include real-time monitoring, anomaly detection, and intelligent resource allocation.",
         "We integrate advanced AI tools to provide deep insights into your cloud operations, enabling data-driven decisions that optimize performance and reduce waste.",
         "For organizations seeking the most sophisticated cloud financial management solutions, our services provide the intelligence and automation needed to stay ahead."
       ]
     },
     {
-      id: "oem-integration",
-      title: "OEM Integration",
+      id: "public-and-cloud-offerings",
+      title: "Public & Cloud Offerings",
       image: oemImage,
       desc: [
-        "Our OEM Integration services provide tailored solutions and seamless integrations for Original Equipment Manufacturer (OEM) partners.",
+        "Our Public & Cloud Offerings services provide tailored solutions and seamless integrations for Original Equipment Manufacturer (OEM) partners.",
         "By working closely with OEM partners, we ensure that their products integrate smoothly with your systems, reducing compatibility issues.",
-        "We offer end-to-end support for OEM integrations, including API development, data synchronization, and ongoing maintenance.",
+        "We offer end-to-end support for Public & Cloud Offeringss, including API development, data synchronization, and ongoing maintenance.",
         "Whether you're expanding your product ecosystem or enhancing existing capabilities, we deliver seamless integrations that drive growth."
       ]
     },

@@ -31,8 +31,8 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-lg mb-2">Services</h4>
           <ul className="text-sm space-y-1">
-            <li><Link to="/all-services#cloud-finops" className="hover:text-red-600 underline">Cloud & AI FinOps</Link></li>
-            <li><Link to="/all-services#oem-integration" className="hover:text-red-600 underline">OEM Integration</Link></li>
+            <li><Link to="/all-services#cloud-ai" className="hover:text-red-600 underline">Cloud & AI Management Platform</Link></li>
+            <li><Link to="/all-services#public-and-cloud-offerings" className="hover:text-red-600 underline">Public & Cloud Offerings</Link></li>
             <li><Link to="/all-services#data-center" className="hover:text-red-600 underline">Modern Data Center Infrastructure</Link></li>
             <li><Link to="/all-services#amc" className="hover:text-red-600 underline">AMC</Link></li>
             <li><Link to="/all-services#cabling" className="hover:text-red-600 underline">Structured Cabling Solutions</Link></li>

@@ -16,14 +16,14 @@ import Footer from '../components/Footer';
 import servicesVideo from "../assets/services_new.mp4";
 
 const items = [
-  { title: "Cloud & AI FinOps", desc: "Optimize cloud costs and operations.", icon: <FaCloud className="text-red-600" />, link: "/all-services#cloud-finops" },
-  { title: "OEM Integration", desc: "Tailored solutions and integrations for OEM partners.", icon: <FaCogs className="text-red-600" />, link: "/all-services#oem-integration" },
+  { title: "Cloud & AI Management Platform", desc: "Optimize cloud costs and operations.", icon: <FaCloud className="text-red-600" />, link: "/all-services#cloud-ai" },
+  { title: "Public & Cloud Offerings", desc: "Tailored solutions and integrations for OEM partners.", icon: <FaCogs className="text-red-600" />, link: "/all-services#public-and-cloud-offerings" },
   { title: "Modern Data Center Infrastructure", desc: "High-performance, scalable, and secure DC designs.", icon: <FaBuilding className="text-red-600" />, link: "/all-services#data-center" },
   { title: "AMC (Annual Maintenance Contracts)", desc: "Proactive maintenance and reliable support.", icon: <FaTools className="text-red-600" />, link: "/all-services#amc" },
   { title: "Structured Cabling Solutions", desc: "Organized, reliable connectivity with easy scalability.", icon: <FaNetworkWired className="text-red-600" />, link: "/all-services#cabling" },
   { title: "Servers / Storage", desc: "From desktops to servers—network-ready resources.", icon: <FaServer className="text-red-600" />, link: "/all-services#servers" },
   { title: "IT Consulting", desc: "Use technology effectively to achieve growth.", icon: <FaLightbulb className="text-red-600" />, link: "/all-services#it-consulting" },
-  { title: "Cloud & AI FinOps", desc: "Optimize cloud costs and operations.", icon: <FaCloud className="text-red-600" />, link: "/all-services#cloud-finops-2" },
+  { title: "Cloud & AI Management Platform", desc: "Optimize cloud costs and operations.", icon: <FaCloud className="text-red-600" />, link: "/all-services#cloud-ai-2" },
 ];
 
 export default function ServicesPage() {
