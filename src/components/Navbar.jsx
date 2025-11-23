@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.ico";
 
 export default function Navbar() {
   const [isHero, setIsHero] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
   const titleRef = useRef(null);
 
   useEffect(() => {
@@ -18,14 +16,23 @@ export default function Navbar() {
         setIsHero(window.scrollY < heroBottom - 80);
       }
     };
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // Lock body scroll when mobile drawer is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const navItems = [
     { label: "Home", path: "/" },
@@ -36,38 +43,37 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 py-2 z-50 transition-all duration-300 bg-white backdrop-blur-md border-b border-gray-200 shadow-md`}
+      className={`fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-3 z-50 transition-all duration-300 bg-white border-b border-gray-200 shadow-md`}
     >
       {/* Logo + Title */}
       <div className="flex items-center space-x-3">
         <img
           src={logo}
           alt="1NETWORKS Logo"
-          className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+          className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
         />
         <div>
           <h1
             ref={titleRef}
-            className={`text-2xl sm:text-5xl font-bold tracking-tight ${
+            className={`text-2xl sm:text-4xl font-bold tracking-tight ${
               isHero ? "text-black drop-shadow" : "text-black"
             }`}
           >
             1NETWORKS
           </h1>
           <p
-  className={`text-xs sm:text-sm lg:text-base whitespace-nowrap ${
-    isHero ? "text-red-500" : "text-red-600"
-  }`}
->
-  Powering Networks{" "}
-  <span className="inline sm:hidden"><br /></span>
-  of Tomorrow
-</p>
-
+            className={`text-xs sm:text-sm lg:text-base whitespace-nowrap ${
+              isHero ? "text-red-500" : "text-red-600"
+            }`}
+          >
+            Powering Networks{" "}
+            <span className="inline sm:hidden"><br /></span>
+            of Tomorrow
+          </p>
         </div>
       </div>
 
-      {/* Desktop Nav Links */}
+      {/* Desktop Nav */}
       <ul className="hidden md:flex space-x-4 lg:space-x-6 font-medium">
         {navItems.map((item) => (
           <li key={item.label}>
@@ -82,32 +88,39 @@ export default function Navbar() {
       </ul>
 
       {/* Mobile Hamburger */}
-      <button
-        className="md:hidden p-2 text-black"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <X size={28} /> : <Menu size={28} />}
-      </button>
+      <div className="md:hidden flex items-center space-x-3">
+        <button
+          className="p-2 rounded-full bg-black text-white shadow-md shadow-black/20"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
 
-      {/* Sidebar Drawer */}
+      {/* Full Screen Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white text-black backdrop-blur-md shadow-lg transform
-          ${isOpen ? "translate-x-0" : "translate-x-full"}
-          transition-transform duration-300 md:hidden z-50`}
+        className={`fixed inset-0 bg-white text-black w-full h-full transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 md:hidden z-50 flex flex-col`}
       >
-        <div className="flex justify-between items-center p-4 border-b border-gray-300">
+        <div className="flex justify-between items-center p-5 border-b border-gray-200">
           <h2 className="text-xl font-bold text-red-600">Menu</h2>
-          <button onClick={() => setIsOpen(false)} className="text-black">
-            <X size={28} />
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200"
+          >
+            <X size={22} />
           </button>
         </div>
-        <ul className="flex flex-col space-y-4 p-6 bg-gray-50">
+
+        <ul className="flex flex-col space-y-3 p-6">
           {navItems.map((item) => (
             <li key={item.label}>
               <Link
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-3 rounded-lg bg-black text-white text-lg font-semibold shadow hover:bg-red-600 hover:text-white transition-all"
+                className="block px-4 py-3 rounded-xl bg-gray-900 text-white text-lg font-semibold shadow-lg shadow-black/20 hover:bg-red-600 transition-all text-center"
               >
                 {item.label}
               </Link>
