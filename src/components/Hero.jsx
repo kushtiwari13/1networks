@@ -1,7 +1,7 @@
 // import homeVideo from "../assets/home_video.mp4";
-import homeVideo from "../assets/home_video_new.mp4";
+import homeVideo from "../assets/home_video_new_small.mp4";
 // import mobileHeroVideo from "../assets/mobile_hero.mp4";
-import mobileHeroVideo from "../assets/mobile_hero_new.mp4";
+import mobileHeroVideo from "../assets/mobile_hero_new_small.mp4";
 
 export default function Hero() {
   return (

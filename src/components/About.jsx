@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Handshake, Lightbulb, Zap } from "lucide-react";
-import valuesVideo from "../assets/values_new.mp4";
+import valuesVideo from "../assets/values_new_small.mp4";
 import {
   Rocket,
   Users,
