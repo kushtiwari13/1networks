@@ -13,7 +13,7 @@ import {
 import Footer from '../components/Footer';
 
 // ✅ Import video from src
-import servicesVideo from "../assets/services.mp4";
+import servicesVideo from "../assets/services_new.mp4";
 
 const items = [
   { title: "Cloud & AI FinOps", desc: "Optimize cloud costs and operations.", icon: <FaCloud className="text-red-600" />, link: "/all-services#cloud-finops" },
