@@ -32,7 +32,7 @@ export default function About() {
 >
   <div className="relative z-10 w-full max-w-6xl px-6 sm:px-10 md:px-16 py-10 space-y-10 mx-auto">
     {/* Vision + Mission in a row */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-stretch auto-rows-fr">
       {/* Our Vision */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -40,17 +40,19 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         whileHover={{ scale: 1.03, y: -6 }}
-        className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center"
+        className="bg-white rounded-2xl shadow-md p-8 lg:p-10 flex flex-col items-center text-left justify-center gap-4 h-full"
       >
-        <h2 className="text-xl md:text-2xl font-semibold text-red-600 mb-4">
-          Our Vision
-        </h2>
-        <p className="text-base leading-relaxed text-gray-700">
-          To be the leading force in next-generation network infrastructure,
-          enabling seamless connectivity from edge to cloud. To be a catalyst
-          for positive change through technology, shaping a future where
-          innovation and creativity know no bounds.
-        </p>
+        <div className="w-full max-w-xl mx-auto space-y-3 text-left">
+          <h2 className="text-xl md:text-2xl font-semibold text-red-600 text-center">
+            Our Vision
+          </h2>
+          <p className="text-base leading-relaxed text-gray-700">
+            To be the leading force in next-generation network infrastructure,
+            enabling seamless connectivity from edge to cloud. To be a catalyst
+            for positive change through technology, shaping a future where
+            innovation and creativity know no bounds.
+          </p>
+        </div>
       </motion.div>
 
       {/* Our Mission */}
@@ -60,18 +62,20 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
         whileHover={{ scale: 1.03, y: -6 }}
-        className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center"
+        className="bg-white rounded-2xl shadow-md p-8 lg:p-10 flex flex-col items-center text-left justify-center gap-4 h-full"
       >
-        <h2 className="text-xl md:text-2xl font-semibold text-red-600 mb-4">
-          Our Mission
-        </h2>
-        <p className="text-base leading-relaxed text-gray-700">
-          Our mission is to create transformative technology solutions that
-          empower businesses and individuals to thrive in a rapidly evolving
-          digital world. We are committed to delivering innovative,
-          user-centric products and services that drive growth, efficiency,
-          and success for our clients.
-        </p>
+        <div className="w-full max-w-xl mx-auto space-y-3 text-left">
+          <h2 className="text-xl md:text-2xl font-semibold text-red-600 text-center">
+            Our Mission
+          </h2>
+          <p className="text-base leading-relaxed text-gray-700">
+            Our mission is to create transformative technology solutions that
+            empower businesses and individuals to thrive in a rapidly evolving
+            digital world. We are committed to delivering innovative,
+            user-centric products and services that drive growth, efficiency,
+            and success for our clients.
+          </p>
+        </div>
       </motion.div>
     </div>
 
@@ -82,28 +86,30 @@ export default function About() {
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.4 }}
       whileHover={{ scale: 1.03, y: -6 }}
-      className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center"
+      className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-left"
     >
-      <h2 className="text-xl md:text-2xl font-semibold text-red-600 mb-4">
-        The Spiral Story
-      </h2>
-      <div className="space-y-3 text-base leading-relaxed text-gray-700">
-        <p>
-          The spiral of red dots at the heart of 1NETWORKS symbolizes our
-          mission: building dynamic, intelligent, ever-expanding networks
-          that grow stronger with every connection.
-        </p>
-        <p>
-          Each dot signifies a node of connection—growing stronger and more
-          integrated as they converge. The red hue embodies energy, passion,
-          and strength, reflecting our commitment to powerful, scalable
-          networking solutions.
-        </p>
-        <p>
-          At 1NETWORKS, we don't just connect devices—we connect
-          possibilities. Our intelligent, scalable solutions are designed to
-          power the next generation of digital infrastructure.
-        </p>
+      <div className="w-full max-w-3xl mx-auto space-y-3 text-left">
+        <h2 className="text-xl md:text-2xl font-semibold text-red-600 text-center">
+          The Spiral Story
+        </h2>
+        <div className="space-y-3 text-base leading-relaxed text-gray-700">
+          <p>
+            The spiral of red dots at the heart of 1NETWORKS symbolizes our
+            mission: building dynamic, intelligent, ever-expanding networks
+            that grow stronger with every connection.
+          </p>
+          <p>
+            Each dot signifies a node of connection—growing stronger and more
+            integrated as they converge. The red hue embodies energy, passion,
+            and strength, reflecting our commitment to powerful, scalable
+            networking solutions.
+          </p>
+          <p>
+            At 1NETWORKS, we don't just connect devices—we connect
+            possibilities. Our intelligent, scalable solutions are designed to
+            power the next generation of digital infrastructure.
+          </p>
+        </div>
       </div>
     </motion.div>
   </div>
