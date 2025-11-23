@@ -1,0 +1,37 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes float1 {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+@keyframes float2 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+@keyframes float3 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-15px, 15px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-float1 { animation: float1 6s ease-in-out infinite; }
+.animate-float2 { animation: float2 8s ease-in-out infinite; }
+.animate-float3 { animation: float3 7s ease-in-out infinite; }
+
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
