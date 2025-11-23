@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
+import ClientsPartners from "./components/ClientsPartners";
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import AllServicesPage from './pages/AllServicesPage';
@@ -42,6 +43,8 @@ function App() {
             <section id="services" className="min-h-screen relative z-0">
               <Services />
             </section>
+
+            <ClientsPartners />
 
             <section id="contact" className="min-h-screen relative z-0">
               <Contact />
