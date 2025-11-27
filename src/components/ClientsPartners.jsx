@@ -1,22 +1,35 @@
 import { motion } from "framer-motion";
-import customer from "../assets/customer.jpg";
-import partner from "../assets/Partner_image.jpg";
+import customer_bial from "../assets/customer_BIAL.png";
+import customer_navigator from "../assets/customer_Navigator.png";
+import customer_nxtgen from "../assets/customer_NxtGen.png";
+import customer_phonepe from "../assets/customer_PhonePe.png";
+import customer_deluxe from "../assets/customer_Deluxe.png";
+import customer_keysights from "../assets/customer_Keysight.png";
+import customer_ntt from "../assets/customer_NTT.png";
+import partner_aquila_clouds from "../assets/partners_Aquila_clouds.png";
+import partner_RandM from "../assets/partners_R&M.png";
+import partner_navigator from "../assets/partners_Navigator.png";
+import partner_hp from "../assets/partners_Hp.png";
+import partner_dell from "../assets/partners_dell.jpg";
+import partner_samsung from "../assets/partners_Samsung.jpeg";
 
 const customers = [
-  { name: "Zenith Healthcare", sector: "Healthcare & IoT Uplift", image: customer },
-  { name: "Harbor Logistics", sector: "Logistics Modernization", image: customer },
-  { name: "Vista Finance", sector: "FinTech & Secure Cloud", image: customer },
-  { name: "Pulse Retail", sector: "Retail Edge Rollouts", image: customer },
-  { name: "Sierra Energy", sector: "Energy & Smart Grid", image: customer },
-  { name: "Metro Realty", sector: "Smart Buildings & DC", image: customer },
+  { name: "BIAL", sector: "Aviation & Smart Infrastructure", image: customer_bial },
+  { name: "Navigator", sector: "Networking & Integration", image: customer_navigator },
+  { name: "NxtGen", sector: "Cloud & Data Center", image: customer_nxtgen },
+  { name: "PhonePe", sector: "FinTech & Digital Payments", image: customer_phonepe },
+  { name: "Deluxe", sector: "Media & Entertainment", image: customer_deluxe },
+  { name: "Keysight", sector: "Testing & Measurement", image: customer_keysights },
+  { name: "NTT", sector: "Telecom & Data Center", image: customer_ntt },
 ];
 
 const partners = [
-  { name: "EdgeWare", logo: partner },
-  { name: "Nimbus Cloud", logo: partner },
-  { name: "Prime OEM", logo: partner },
-  { name: "Helix Data", logo: partner },
-  { name: "NorthBridge", logo: partner },
+  { name: "Aquila Clouds", logo: partner_aquila_clouds },
+  { name: "R&M", logo: partner_RandM },
+  { name: "Navigator", logo: partner_navigator },
+  { name: "HP", logo: partner_hp },
+  { name: "Dell", logo: partner_dell },
+  { name: "Samsung", logo: partner_samsung },
 ];
 
 export default function ClientsPartners() {
