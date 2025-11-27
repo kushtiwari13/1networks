@@ -1,7 +1,9 @@
 // import homeVideo from "../assets/home_video.mp4";
-import homeVideo from "../assets/home_video_new_small.mp4";
+// import homeVideo from "../assets/home_video_new_small.mp4";
+import homeVideo from "../assets/website.mp4";
 // import mobileHeroVideo from "../assets/mobile_hero.mp4";
-import mobileHeroVideo from "../assets/mobile_hero_new_small.mp4";
+// import mobileHeroVideo from "../assets/mobile_hero_new_small.mp4";
+import mobileHeroVideo from "../assets/mobile.mp4";
 
 export default function Hero() {
   return (
@@ -10,16 +12,17 @@ export default function Hero() {
       className="relative h-screen w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12 overflow-hidden"
     >
       {/* 🔴 Background Video for desktop */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
-      >
-        <source src={homeVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="absolute inset-0 w-full h-full object-cover hidden md:block"
+      style={{ objectPosition: "center 0%" }} // increase % to push view further down
+    >
+      <source src={homeVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
       {/* 🔴 Background Video for mobile */}
       <video

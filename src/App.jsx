@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -12,6 +12,16 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import AllServicesPage from './pages/AllServicesPage';
 
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) return; // let in-page anchors handle their own scroll
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname, hash]);
+
+  return null;
+}
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,6 +37,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={
           <div className="font-poppins">
