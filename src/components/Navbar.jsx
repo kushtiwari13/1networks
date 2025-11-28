@@ -66,9 +66,8 @@ export default function Navbar() {
               isHero ? "text-red-500" : "text-red-600"
             }`}
           >
-            Powering Networks{" "}
+            Powering Connections{" "}
             <span className="inline sm:hidden"><br /></span>
-            of Tomorrow
           </p>
         </div>
       </div>
