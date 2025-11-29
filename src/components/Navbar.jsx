@@ -46,7 +46,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-3 z-50 transition-all duration-300 bg-white border-b border-gray-200 shadow-md`}
     >
       {/* Logo + Title */}
-      <div className="flex items-center space-x-3">
+      <Link to="/" className="flex items-center space-x-3">
         <img
           src={logo}
           alt="1NETWORKS Logo"
@@ -70,7 +70,7 @@ export default function Navbar() {
             <span className="inline sm:hidden"><br /></span>
           </p>
         </div>
-      </div>
+      </Link>
 
       {/* Desktop Nav */}
       <ul className="hidden md:flex space-x-4 lg:space-x-6 font-medium">

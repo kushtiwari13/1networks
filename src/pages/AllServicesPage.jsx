@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import cloudImage from "../assets/cloud.jpg";
 import pcoImage from "../assets/pco.jpg";
@@ -11,15 +12,18 @@ import corporateImage from "../assets/corporateGifting.jpg";
 import Footer from "../components/Footer";
 
 export default function AllServicesPage() {
+  const location = useLocation();
+
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.querySelector(hash);
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
+    } else {
+      window.scrollTo({ top: 0 });
     }
-  }, []);
+  }, [location]);
 
   const services = [
     {
