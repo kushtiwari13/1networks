@@ -13,7 +13,6 @@ export default function Footer() {
           <p className="text-sm mb-4">
             We build dynamic, future-proof infrastructure—from edge to cloud— that grows stronger with every connection.
           </p>
-          <p className="text-xs">&copy; 2023 1NETWORKS. All rights reserved.</p>
         </div>
 
         {/* Pages Section */}
@@ -56,6 +55,22 @@ export default function Footer() {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto mt-8 pt-4 border-t border-white/10 flex flex-col md:flex-row items-center md:items-start justify-between text-xs text-gray-300">
+        <span className="mt-2 md:mt-0">
+          &copy; 2025{" "}
+          <a href="/" target="_blank" rel="noreferrer" className="text-red-400 font-semibold hover:text-gray-300">
+            1NETWORKS
+          </a>
+          . All rights reserved.
+        </span>
+        <span className="mt-2 md:mt-0">
+          Designed &amp; Developed by{" "}
+          <a href="https://www.mindsahead.in/" target="_blank" rel="noreferrer" className="text-red-400 font-semibold hover:text-gray-300">
+            MindsAhead Digital
+          </a>
+        </span>
       </div>
     </footer>
   );
