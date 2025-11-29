@@ -40,7 +40,7 @@ export default function ClientsPartners() {
     <>
       <section
         id="customers"
-        className="relative min-h-[50vh] bg-gray-50 px-6 py-8 font-[Poppins] flex items-center"
+        className="relative bg-gray-50 px-6 py-12 font-[Poppins]"
       >
         <div className="max-w-6xl mx-auto w-full">
           <div className="text-center space-y-2 mb-6">
@@ -77,7 +77,7 @@ export default function ClientsPartners() {
 
       <section
         id="partners"
-        className="relative min-h-[50vh] bg-white px-6 py-8 font-[Poppins] flex items-center"
+        className="relative bg-white px-6 py-12 font-[Poppins]"
       >
         <div className="max-w-6xl mx-auto w-full">
           <div className="text-center space-y-2 mb-6">

@@ -124,7 +124,7 @@ export default function AllServicesPage() {
           <section
             key={service.id}
             id={service.id}
-            className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8"
+            className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6 sm:p-8 scroll-mt-24"
           >
             <h2 className="text-3xl font-semibold text-red-600 text-center mb-8">
               {service.title}

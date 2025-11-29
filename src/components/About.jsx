@@ -28,7 +28,7 @@ export default function About() {
       {/* === Section 1: About Us Hero + Mission, Vision, Story === */}
 <section
   id="about"
-  className="relative min-h-screen flex items-center justify-center font-[Poppins] pt-24 sm:pt-32 bg-gray-50"
+  className="relative min-h-screen flex items-center justify-center font-[Poppins] pt-24 sm:pt-32 bg-gray-50 scroll-mt-24"
 >
   <div className="relative z-10 w-full max-w-6xl px-6 sm:px-10 md:px-16 py-10 space-y-10 mx-auto">
     {/* Vision + Mission in a row */}
@@ -117,16 +117,16 @@ export default function About() {
 
      {/* === Section 2: Our Values === */}
 <section className="relative min-h-screen flex items-center justify-center font-[Poppins] px-6 py-16 overflow-hidden">
-  {/* Background video (no dark overlay) */}
+  {/* Background video */}
   <video
-  className="absolute inset-0 w-full h-full object-cover -z-10"
-  autoPlay
-  loop
-  muted
-  playsInline
->
-  <source src={valuesVideo} type="video/mp4" />
-</video>
+    className="absolute inset-0 w-full h-full object-cover -z-10"
+    autoPlay
+    loop
+    muted
+    playsInline
+  >
+    <source src={valuesVideo} type="video/mp4" />
+  </video>
 
   <div className="w-full max-w-4xl relative z-10">
     <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-10">

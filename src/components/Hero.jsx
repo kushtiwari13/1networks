@@ -9,20 +9,20 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-screen w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12 overflow-hidden"
+      className="relative h-screen w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12 overflow-hidden scroll-mt-24"
     >
       {/* 🔴 Background Video for desktop */}
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover hidden md:block"
-      style={{ objectPosition: "center 0%" }} // increase % to push view further down
-    >
-      <source src={homeVideo} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover hidden md:block"
+        style={{ objectPosition: "center 0%" }} // increase % to push view further down
+      >
+        <source src={homeVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* 🔴 Background Video for mobile */}
       <video
@@ -35,6 +35,7 @@ export default function Hero() {
         <source src={mobileHeroVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
 
       {/* Left Side Content */}
       <div className="relative z-10 md:w-1/2 text-center md:text-left pt-32 md:pt-0">

@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar';
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -29,9 +28,9 @@ const items = [
 export default function ServicesPage() {
   return (
     <div className="font-poppins">
-      <Navbar />
       <section
-        className="relative pt-28 pb-24 px-8 font-[Poppins] overflow-hidden"
+        id="services"
+        className="relative pt-28 pb-24 px-6 sm:px-8 font-[Poppins] overflow-hidden scroll-mt-24"
       >
         {/* Background video */}
         <video
@@ -47,8 +46,8 @@ export default function ServicesPage() {
 
         {/* Section heading */}
         <div className="text-center mb-12 relative z-10">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-black mb-4">Our Services</h2>
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto">
             Innovative, reliable, and future-ready solutions for modern businesses.
           </p>
         </div>
@@ -62,15 +61,18 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-4 sm:p-6 rounded-2xl shadow-lg shadow-black/20 hover:scale-105 hover:shadow-2xl transition transform duration-300 text-center cursor-pointer h-48 flex flex-col justify-between"
+                className="bg-white/90 backdrop-blur p-4 sm:p-6 rounded-2xl shadow-lg shadow-black/20 hover:-translate-y-1 hover:shadow-2xl transition transform duration-300 text-center cursor-pointer h-full flex flex-col gap-3 border border-white/40"
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl mb-3 flex justify-center">
-                  {item.icon}
+                <div className="flex justify-center">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-red-50 border border-red-200 flex items-center justify-center">
+                    {item.icon}
+                  </div>
                 </div>
-                <h3 className="text-sm sm:text-lg lg:text-xl font-semibold text-gray-800 mb-2 break-words">
+                <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 break-words">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-xs sm:text-sm break-words">{item.desc}</p>
+                <p className="text-gray-700 text-sm sm:text-base break-words flex-1">{item.desc}</p>
+                <span className="text-sm font-semibold text-red-600">Learn more →</span>
               </motion.div>
             </Link>
           ))}

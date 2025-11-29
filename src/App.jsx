@@ -43,21 +43,21 @@ function App() {
           <div className="font-poppins">
             <Navbar />
 
-            <section id="hero" className="min-h-screen relative z-0">
+            <section className="relative z-0">
               <Hero />
             </section>
 
-            <section id="about" className="min-h-screen relative z-0">
+            <section className="relative z-0">
               <About />
             </section>
 
-            <section id="services" className="min-h-screen relative z-0">
+            <section className="relative z-0">
               <Services />
             </section>
 
             <ClientsPartners />
 
-            <section id="contact" className="min-h-screen relative z-0">
+            <section className="relative z-0">
               <Contact />
             </section>
 

@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <section
   id="contact"
-  className="relative bg-[#f5f5f5] pt-28 pb-28 px-6 scroll-mt-24"
+  className="relative bg-[#f5f5f5] pt-24 pb-20 px-6 scroll-mt-24"
 >
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
     {/* Left Side - Title */}
