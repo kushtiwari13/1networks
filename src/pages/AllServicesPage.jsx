@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import cloudImage from "../assets/cloud.jpg";
-import oemImage from "../assets/oem.jpg";
+import pcoImage from "../assets/pco.jpg";
 import dataCenter from "../assets/datacenter.jpg";
 import amcImage from "../assets/amc.jpg";
 import cablesImage from "../assets/cables.jpg";
@@ -35,10 +35,10 @@ export default function AllServicesPage() {
     {
       id: "public-and-cloud-offerings",
       title: "Public & Cloud Offerings",
-      image: oemImage,
+      image: pcoImage,
       desc: [
-        "Our Public & Cloud Offerings services provide tailored solutions and seamless integrations for Original Equipment Manufacturer (OEM) partners.",
-        "By working closely with OEM partners, we ensure that their products integrate smoothly with your systems, reducing compatibility issues.",
+        "Our Public & Cloud Offerings services provide tailored solutions and seamless integrations for Original Equipment Manufacturer (PCO) partners.",
+        "By working closely with PCO partners, we ensure that their products integrate smoothly with your systems, reducing compatibility issues.",
         "We offer end-to-end support for Public & Cloud Offeringss, including API development, data synchronization, and ongoing maintenance.",
         "Whether you're expanding your product ecosystem or enhancing existing capabilities, we deliver seamless integrations that drive growth."
       ]

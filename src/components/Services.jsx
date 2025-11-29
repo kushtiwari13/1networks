@@ -16,7 +16,7 @@ import servicesVideo from "../assets/services_new.mp4";
 
 const items = [
   { title: "Cloud & AI Management Platform", desc: "Optimize cloud costs and operations.", icon: <FaCloud className="text-red-600" />, link: "/all-services#cloud-ai" },
-  { title: "Public & Cloud Offerings", desc: "Tailored solutions and integrations for OEM partners.", icon: <FaCogs className="text-red-600" />, link: "/all-services#public-and-cloud-offerings" },
+  { title: "Public & Cloud Offerings", desc: "Tailored solutions and integrations for PCO partners.", icon: <FaCogs className="text-red-600" />, link: "/all-services#public-and-cloud-offerings" },
   { title: "Modern Data Center Infrastructure", desc: "High-performance, scalable, and secure DC designs.", icon: <FaBuilding className="text-red-600" />, link: "/all-services#data-center" },
   { title: "AMC (Annual Maintenance Contracts)", desc: "Proactive maintenance and reliable support.", icon: <FaTools className="text-red-600" />, link: "/all-services#amc" },
   { title: "Structured Cabling Solutions", desc: "Organized, reliable connectivity with easy scalability.", icon: <FaNetworkWired className="text-red-600" />, link: "/all-services#cabling" },
