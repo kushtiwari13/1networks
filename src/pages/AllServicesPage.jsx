@@ -123,29 +123,29 @@ export default function AllServicesPage() {
         <h1 className="text-4xl font-bold text-red-600">Our Services</h1>
       </div>
 
-      <div className="max-w-6xl mx-auto space-y-16 pb-24 px-6">
+      <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16 pb-24 px-4 sm:px-6">
         {services.map((service) => (
           <section
             key={service.id}
             id={service.id}
-            className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6 sm:p-8 scroll-mt-24"
+            className="bg-white rounded-2xl shadow-xl border border-gray-200 p-5 sm:p-7 scroll-mt-24 max-w-3xl sm:max-w-none mx-auto"
           >
-            <h2 className="text-3xl font-semibold text-red-600 text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-red-600 text-center mb-6 sm:mb-8">
               {service.title}
             </h2>
 
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
               {/* Left: Image */}
               <div className="flex-1">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full rounded-xl shadow-md"
+                  className="w-full rounded-xl shadow-md max-h-52 sm:max-h-none object-cover"
                 />
               </div>
 
               {/* Right: Text */}
-              <div className="flex-1 text-lg text-gray-700 leading-relaxed space-y-4">
+              <div className="flex-1 text-sm sm:text-lg text-gray-700 leading-relaxed space-y-3 sm:space-y-4">
                 {service.desc.map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}
