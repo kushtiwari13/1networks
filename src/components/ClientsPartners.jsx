@@ -45,7 +45,7 @@ export default function ClientsPartners() {
         <div className="max-w-6xl mx-auto w-full">
           <div className="text-center space-y-2 mb-6">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Our Current <span className="text-red-600">Customers</span>
+              Our <span className="text-red-600">Clients</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               We support ambitious organizations that demand reliable, scalable infrastructure.

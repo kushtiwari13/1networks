@@ -8,7 +8,8 @@ import {
   FaTools,
   FaNetworkWired,
   FaServer,
-  FaLightbulb
+  FaLightbulb,
+  FaGift,
 } from "react-icons/fa";
 
 // ✅ Import video from src
@@ -22,7 +23,7 @@ const items = [
   { title: "Structured Cabling Solutions", desc: "Organized, reliable connectivity with easy scalability.", icon: <FaNetworkWired className="text-red-600" />, link: "/all-services#cabling" },
   { title: "Servers / Storage", desc: "From desktops to servers—network-ready resources.", icon: <FaServer className="text-red-600" />, link: "/all-services#servers" },
   { title: "IT Consulting", desc: "Use technology effectively to achieve growth.", icon: <FaLightbulb className="text-red-600" />, link: "/all-services#it-consulting" },
-  { title: "Cloud & AI Management Platform", desc: "Optimize cloud costs and operations.", icon: <FaCloud className="text-red-600" />, link: "/all-services#cloud-ai-2" },
+  { title: "Corporate Gifting", desc: "Curated tech-forward gifts and hampers for clients and teams.", icon: <FaGift className="text-red-600" />, link: "/all-services#corporate-gifting" },
 ];
 
 export default function ServicesPage() {

@@ -7,6 +7,7 @@ import amcImage from "../assets/amc.jpg";
 import cablesImage from "../assets/cables.jpg";
 import serversImage from "../assets/servers.jpg";
 import itImage from "../assets/it.jpg";
+import corporateImage from "../assets/corporateGifting.jpg";
 import Footer from "../components/Footer";
 
 export default function AllServicesPage() {
@@ -96,6 +97,17 @@ export default function AllServicesPage() {
         "We analyze your IT landscape and recommend scalable improvements.",
         "From digital transformation to cybersecurity, we provide expert strategies.",
         "We enable innovation, governance, and competitive advantage."
+      ]
+    },
+    {
+      id: "corporate-gifting",
+      title: "Corporate Gifting",
+      image: corporateImage,
+      desc: [
+        "Thoughtfully curated gifting solutions for clients, partners, and teams.",
+        "Tech-forward hampers, premium essentials, and customized bundles that align with your brand.",
+        "End-to-end fulfillment, including branding, packaging, and doorstep delivery.",
+        "Make every occasion memorable while reinforcing lasting relationships."
       ]
     }
   ];
