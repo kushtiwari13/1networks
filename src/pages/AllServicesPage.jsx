@@ -18,7 +18,7 @@ export default function AllServicesPage() {
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     } else {
       window.scrollTo({ top: 0 });
