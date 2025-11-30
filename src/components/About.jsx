@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Target, Handshake, Lightbulb, Zap } from "lucide-react";
-import valuesVideo from "../assets/values_new_small.mp4";
 import {
   Rocket,
   Users,
@@ -11,6 +10,8 @@ import {
   Award,
   Settings,
 } from "lucide-react";
+
+const valuesVideo = "https://rapid-lab-7fb3.tiwarikush9328.workers.dev/values_new_small.mp4";
 
 const uniqueValues = [
   { title: "Innovative Solutions", description: "Leveraging the latest advancements.", icon: <Rocket size={28} /> },

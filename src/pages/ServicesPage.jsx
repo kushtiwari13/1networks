@@ -13,8 +13,7 @@ import {
 } from "react-icons/fa";
 import Footer from '../components/Footer';
 
-// ✅ Import video from src
-import servicesVideo from "../assets/services_new.mp4";
+const servicesVideo = "https://rapid-lab-7fb3.tiwarikush9328.workers.dev/services_new.mp4";
 
 const items = [
   { title: "Cloud & AI Management Platform", desc: "Optimize cloud costs and operations.", icon: <FaCloud className="text-red-600" />, link: "/all-services#cloud-ai" },
