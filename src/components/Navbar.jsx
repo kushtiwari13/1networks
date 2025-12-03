@@ -17,21 +17,12 @@ export default function Navbar() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile drawer is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => (document.body.style.overflow = "");
   }, [isOpen]);
 
   const navItems = [
@@ -50,7 +41,7 @@ export default function Navbar() {
         <img
           src={logo}
           alt="1NETWORKS Logo"
-          className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+          className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-slowspin"
         />
         <div className="leading-tight">
           <h1
