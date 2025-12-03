@@ -63,7 +63,7 @@ export default function Navbar() {
           </h1>
 
           <p
-            className={`text-[10px] sm:text-xs lg:text-sm whitespace-nowrap leading-none mt-0.5 pl-0.5
+            className={`text-[10px] sm:text-xs lg:text-sm whitespace-nowrap leading-none mt-0.5 pl-[2px]
               ${
                 isHero ? "text-red-500" : "text-red-600"
               }
