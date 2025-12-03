@@ -28,6 +28,22 @@ function ScrollToTop() {
   return null;
 }
 
+function TitleManager() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const titles = {
+      "/": "1NETWORKS - Home",
+      "/about": "1NETWORKS - About",
+      "/all-services": "1NETWORKS - Services",
+      "/contact": "1NETWORKS - Contact",
+    };
+    document.title = titles[pathname] || "1NETWORKS";
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -79,6 +95,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <TitleManager />
       <Routes>
         <Route path="/" element={
           <div className="font-poppins">
