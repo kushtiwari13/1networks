@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
   const formRef = useRef(null);
@@ -59,8 +60,16 @@ export default function Contact() {
           here to help.
         </p>
         <div className="space-y-1">
-          <h4 className="font-medium text-lg">Preeti Kiran</h4>
-          <p className="text-sm">✉️ preetikiran@1networks.in</p>
+          <h4 className="flex items-center gap-2 justify-center text-sm font-medium text-gray-100">
+            <FaEnvelope aria-hidden="true" className="text-400" />
+            <span>Email</span>
+          </h4>
+          <a
+            href="mailto:info@1nw"
+            className="text-sm hover:text-red-300 transition block text-center"
+          >
+            info@1nw
+          </a>
         </div>
       </div>
 
