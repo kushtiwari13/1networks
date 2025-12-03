@@ -52,19 +52,22 @@ export default function Navbar() {
           alt="1NETWORKS Logo"
           className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
         />
-        <div>
+        <div className="leading-tight">
           <h1
             ref={titleRef}
-            className={`text-2xl sm:text-4xl font-bold tracking-tight ${
+            className={`text-2xl sm:text-4xl font-bold tracking-tight leading-none ${
               isHero ? "text-black drop-shadow" : "text-black"
             }`}
           >
             1NETWORKS
           </h1>
+
           <p
-            className={`text-xs sm:text-sm lg:text-base whitespace-nowrap ${
-              isHero ? "text-red-500" : "text-red-600"
-            }`}
+            className={`text-[10px] sm:text-xs lg:text-sm whitespace-nowrap leading-none mt-0.5 pl-0.5
+              ${
+                isHero ? "text-red-500" : "text-red-600"
+              }
+            `}
           >
             Powering Connections{" "}
             <span className="inline sm:hidden"><br /></span>
