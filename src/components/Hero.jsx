@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col items-center justify-between w-full h-screen px-6 overflow-hidden md:flex-row md:px-12 scroll-mt-24"
+      className="relative flex flex-col items-center justify-between w-full px-6 pb-16 overflow-hidden md:h-screen md:flex-row md:px-12 scroll-mt-24"
     >
       {/* 🔴 Background Video for desktop */}
       <video
@@ -45,23 +45,25 @@ export default function Hero() {
           xl:w-[40%] 
           text-center md:text-left pt-40 md:pt-0 flex flex-col"
       >
-        <h1 className="text-3xl font-bold leading-tight text-red-700 sm:text-4xl md:text-5xl">
-          Unified, Intelligent & Scalable Networks
-        </h1>
-        <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-800 font-poppins max-w-[95%] md:max-w-[90%] lg:max-w-[85%]">
-          We build dynamic, future-proof infrastructure—from edge to cloud 
-          —
-          that grows stronger with every connection.
-        </p>
+        <div className="px-3 py-10 shadow-lg md:bg-transparent bg-white/90 backdrop-blur-md rounded-2xl md:p-0 md:rounded-none md:shadow-none">
+          <h1 className="text-3xl font-bold leading-tight text-red-700 sm:text-4xl md:text-5xl">
+            Unified, Intelligent & Scalable Networks
+          </h1>
+          <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-800 font-poppins max-w-[95%] md:max-w-[90%] lg:max-w-[85%]">
+            We build dynamic, future-proof infrastructure—from edge to cloud
+            —
+            that grows stronger with every connection.
+          </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col gap-4 mt-6 md:mt-10 sm:flex-row sm:justify-center md:justify-start">
-          <a 
-            href="#services" 
-            className="px-6 py-3 text-center text-white transition bg-red-600 rounded-lg shadow-lg hover:bg-black"
-          >
-            Explore our services
-          </a>
+          {/* CTA Buttons */}
+          <div className="flex flex-col gap-4 mt-6 md:mt-10 sm:flex-row sm:justify-center md:justify-start">
+            <a
+              href="#services"
+              className="px-6 py-3 text-center text-white transition bg-red-600 rounded-lg shadow-lg hover:bg-black"
+            >
+              Explore our services
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -29,11 +29,11 @@ export default function About() {
       {/* === Section 1: About Us Hero + Mission, Vision, Story === */}
 <section
   id="about"
-  className="relative min-h-screen flex items-center justify-center font-[Poppins] pt-24 sm:pt-32 bg-gray-50 scroll-mt-24"
+  className="relative min-h-screen flex items-center justify-center font-[Poppins] pt-10 sm:pt-32 bg-gray-50 scroll-mt-24"
 >
-  <div className="relative z-10 w-full max-w-6xl px-6 sm:px-10 md:px-16 py-10 space-y-10 mx-auto">
+  <div className="relative z-10 w-full max-w-6xl px-6 py-10 mx-auto space-y-10 sm:px-10 md:px-16">
     {/* Vision + Mission in a row */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-stretch auto-rows-fr">
+    <div className="grid items-stretch grid-cols-1 gap-8 md:grid-cols-2 md:gap-10 lg:gap-12 auto-rows-fr">
       {/* Our Vision */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -41,10 +41,10 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         whileHover={{ scale: 1.03, y: -6 }}
-        className="bg-white rounded-2xl shadow-md p-8 lg:p-10 flex flex-col items-center text-left justify-center gap-4 h-full"
+        className="flex flex-col items-center justify-center h-full gap-4 p-8 text-left bg-white shadow-md rounded-2xl lg:p-10"
       >
         <div className="w-full max-w-xl mx-auto space-y-3 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold text-red-600 text-center">
+          <h2 className="text-xl font-semibold text-center text-red-600 md:text-2xl">
             Our Vision
           </h2>
           <p className="text-base leading-relaxed text-gray-700">
@@ -63,10 +63,10 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
         whileHover={{ scale: 1.03, y: -6 }}
-        className="bg-white rounded-2xl shadow-md p-8 lg:p-10 flex flex-col items-center text-left justify-center gap-4 h-full"
+        className="flex flex-col items-center justify-center h-full gap-4 p-8 text-left bg-white shadow-md rounded-2xl lg:p-10"
       >
         <div className="w-full max-w-xl mx-auto space-y-3 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold text-red-600 text-center">
+          <h2 className="text-xl font-semibold text-center text-red-600 md:text-2xl">
             Our Mission
           </h2>
           <p className="text-base leading-relaxed text-gray-700">
@@ -87,10 +87,10 @@ export default function About() {
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.4 }}
       whileHover={{ scale: 1.03, y: -6 }}
-      className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-left"
+      className="flex flex-col items-center p-8 text-left bg-white shadow-md rounded-2xl"
     >
       <div className="w-full max-w-3xl mx-auto space-y-3 text-left">
-        <h2 className="text-xl md:text-2xl font-semibold text-red-600 text-center">
+        <h2 className="text-xl font-semibold text-center text-red-600 md:text-2xl">
           The Spiral Story
         </h2>
         <div className="space-y-3 text-base leading-relaxed text-gray-700">
@@ -120,7 +120,7 @@ export default function About() {
 <section className="relative min-h-screen flex items-center justify-center font-[Poppins] px-6 py-16 overflow-hidden">
   {/* Background video */}
   <video
-    className="absolute inset-0 w-full h-full object-cover -z-10"
+    className="absolute inset-0 object-cover w-full h-full -z-10"
     autoPlay
     loop
     muted
@@ -129,12 +129,12 @@ export default function About() {
     <source src={valuesVideo} type="video/mp4" />
   </video>
 
-  <div className="w-full max-w-4xl relative z-10">
-    <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-10">
+  <div className="relative z-10 w-full max-w-4xl">
+    <h2 className="mb-10 text-3xl font-bold text-center text-black md:text-4xl">
       Our Values
     </h2>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
       {[
         {
           title: "Customer First",
@@ -170,7 +170,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: idx * 0.12 }}
             whileHover={{ scale: 1.03, y: -6 }}
-            className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-md p-8 flex flex-col items-center text-center"
+            className="flex flex-col items-center p-8 text-center border border-gray-200 shadow-md bg-white/90 backdrop-blur-sm rounded-2xl"
           >
             {/* floating icon */}
             <motion.div
@@ -185,11 +185,11 @@ export default function About() {
               <Icon className="w-10 h-10 text-red-600" aria-hidden="true" />
             </motion.div>
 
-            <h3 className="text-lg font-semibold text-black mb-2">
+            <h3 className="mb-2 text-lg font-semibold text-black">
               {val.title}
             </h3>
 
-            <p className="text-sm text-gray-700 leading-relaxed">
+            <p className="text-sm leading-relaxed text-gray-700">
               {val.description}
             </p>
           </motion.div>
@@ -207,7 +207,7 @@ export default function About() {
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8 }}
-    className="text-3xl md:text-4xl font-bold text-black mb-8 md:mb-16 text-center"
+    className="mb-8 text-3xl font-bold text-center text-black md:text-4xl md:mb-16"
   >
     WHAT MAKES US UNIQUE
   </motion.h2>
@@ -223,24 +223,24 @@ export default function About() {
         transition={{ duration: 0.6, delay: idx * 0.1 }}
         className="flex items-center space-x-4"
       >
-        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 text-red-600 shadow-md">
+        <div className="flex items-center justify-center w-12 h-12 text-red-600 bg-red-100 rounded-full shadow-md">
           {val.icon}
         </div>
-        <div className="bg-white p-4 rounded-2xl shadow-md border-l-4 border-red-500 flex-1 text-left">
-          <h3 className="font-semibold text-black mb-1">{val.title}</h3>
-          <p className="text-gray-600 text-sm">{val.description}</p>
+        <div className="flex-1 p-4 text-left bg-white border-l-4 border-red-500 shadow-md rounded-2xl">
+          <h3 className="mb-1 font-semibold text-black">{val.title}</h3>
+          <p className="text-sm text-gray-600">{val.description}</p>
         </div>
       </motion.div>
     ))}
   </div>
 
   {/* Desktop Layout */}
-  <div className="relative max-w-6xl mx-auto hidden md:flex flex-row justify-between">
+  <div className="relative flex-row justify-between hidden max-w-6xl mx-auto md:flex">
     {/* Central vertical line */}
-    <div className="absolute left-1/2 top-0 w-1 bg-red-500 h-full"></div>
+    <div className="absolute top-0 w-1 h-full bg-red-500 left-1/2"></div>
 
     {/* Left Column */}
-    <div className="flex flex-col justify-between space-y-12 mr-6">
+    <div className="flex flex-col justify-between mr-6 space-y-12">
       {uniqueValues.slice(0, 4).map((val, idx) => (
         <motion.div
           key={idx}
@@ -248,16 +248,16 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: idx * 0.15 }}
-          className="flex items-center justify-end space-x-4 relative"
+          className="relative flex items-center justify-end space-x-4"
         >
           {/* Text box */}
-          <div className="bg-white p-4 rounded-2xl shadow-md border-l-4 border-red-500 max-w-xs text-right">
-            <h3 className="font-semibold text-black mb-1">{val.title}</h3>
-            <p className="text-gray-600 text-sm">{val.description}</p>
+          <div className="max-w-xs p-4 text-right bg-white border-l-4 border-red-500 shadow-md rounded-2xl">
+            <h3 className="mb-1 font-semibold text-black">{val.title}</h3>
+            <p className="text-sm text-gray-600">{val.description}</p>
           </div>
 
           {/* Icon on the line */}
-          <div className="w-16 h-16 flex items-center justify-center rounded-full bg-red-100 text-red-600 shadow-md">
+          <div className="flex items-center justify-center w-16 h-16 text-red-600 bg-red-100 rounded-full shadow-md">
             {val.icon}
           </div>
         </motion.div>
@@ -265,7 +265,7 @@ export default function About() {
     </div>
 
     {/* Right Column */}
-    <div className="flex flex-col justify-between space-y-12 ml-6">
+    <div className="flex flex-col justify-between ml-6 space-y-12">
       {uniqueValues.slice(4, 8).map((val, idx) => (
         <motion.div
           key={idx}
@@ -273,17 +273,17 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: idx * 0.15 }}
-          className="flex items-center space-x-4 relative"
+          className="relative flex items-center space-x-4"
         >
           {/* Icon on the line */}
-          <div className="w-16 h-16 flex items-center justify-center rounded-full bg-red-100 text-red-600 shadow-md">
+          <div className="flex items-center justify-center w-16 h-16 text-red-600 bg-red-100 rounded-full shadow-md">
             {val.icon}
           </div>
 
           {/* Text box */}
-          <div className="bg-white p-4 rounded-2xl shadow-md border-r-4 border-red-500 max-w-xs text-left">
-            <h3 className="font-semibold text-black mb-1">{val.title}</h3>
-            <p className="text-gray-600 text-sm">{val.description}</p>
+          <div className="max-w-xs p-4 text-left bg-white border-r-4 border-red-500 shadow-md rounded-2xl">
+            <h3 className="mb-1 font-semibold text-black">{val.title}</h3>
+            <p className="text-sm text-gray-600">{val.description}</p>
           </div>
         </motion.div>
       ))}
