@@ -1,4 +1,4 @@
-const mobile_hero_bg = "/mobile_hero_bg.mp4";
+const mobile_hero_bg = "https://res.cloudinary.com/dgstsk42n/video/upload/v1765364141/Untitled_design_1_w3zclx.mp4";
 // import homeVideo from "../assets/home_video.mp4";
 // import homeVideo from "../assets/home_video_new_small.mp4";
 const homeVideo = "https://rapid-lab-7fb3.tiwarikush9328.workers.dev/website.mp4";
