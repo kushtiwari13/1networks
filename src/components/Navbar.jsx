@@ -34,14 +34,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-3 z-50 transition-all duration-300 bg-white border-b border-gray-200 shadow-md`}
+      className={`fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-2 z-50 transition-all duration-300 bg-white border-b border-gray-200 shadow-md`}
     >
       {/* Logo + Title */}
       <Link to="/" className="flex items-center space-x-3">
         <img
           src={logo}
           alt="1NETWORKS Logo"
-          className="w-10 h-10 sm:w-12 sm:h-12 object-contain animate-slowspin"
+          className="object-contain w-12 h-12 sm:w-12 sm:h-12 animate-slowspin"
         />
         <div className="leading-tight">
           <h1
@@ -67,12 +67,12 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Nav */}
-      <ul className="hidden md:flex space-x-4 lg:space-x-6 font-medium">
+      <ul className="hidden space-x-4 font-medium md:flex lg:space-x-6">
         {navItems.map((item) => (
           <li key={item.label}>
             <Link
               to={item.path}
-              className="px-6 py-2 rounded-full text-base shadow-md transition-all duration-300 bg-black text-white hover:bg-red-600 hover:text-white"
+              className="px-6 py-2 text-base text-white transition-all duration-300 bg-black rounded-full shadow-md hover:bg-red-600 hover:text-white"
             >
               {item.label}
             </Link>
@@ -81,9 +81,9 @@ export default function Navbar() {
       </ul>
 
       {/* Mobile Hamburger */}
-      <div className="md:hidden flex items-center space-x-3">
+      <div className="flex items-center space-x-3 md:hidden">
         <button
-          className="p-2 rounded-full bg-black text-white shadow-md shadow-black/20"
+          className="p-2 text-white bg-black rounded-full shadow-md shadow-black/20"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -97,23 +97,23 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 md:hidden z-50 flex flex-col`}
       >
-        <div className="flex justify-between items-center p-5 border-b border-gray-200">
+        <div className="flex items-center justify-between p-5 border-b border-gray-200">
           <h2 className="text-xl font-bold text-red-600">Menu</h2>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200"
+            className="p-2 bg-gray-100 rounded-full hover:bg-gray-200"
           >
             <X size={22} />
           </button>
         </div>
 
-        <ul className="flex flex-col space-y-3 p-6">
+        <ul className="flex flex-col p-6 space-y-3">
           {navItems.map((item) => (
             <li key={item.label}>
               <Link
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-3 rounded-xl bg-gray-900 text-white text-lg font-semibold shadow-lg shadow-black/20 hover:bg-red-600 transition-all text-center"
+                className="block px-4 py-3 text-lg font-semibold text-center text-white transition-all bg-gray-900 shadow-lg rounded-xl shadow-black/20 hover:bg-red-600"
               >
                 {item.label}
               </Link>

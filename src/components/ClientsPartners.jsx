@@ -12,6 +12,7 @@ import partner_navigator from "../assets/partners_Navigator.png";
 import partner_hp from "../assets/partners_Hp.png";
 import partner_dell from "../assets/partners_dell.jpg";
 import partner_samsung from "../assets/partners_Samsung.jpeg";
+import partner_versa from "../assets/partner_versa.svg";
 
 const customers = [
   { name: "BIAL", sector: "Aviation & Smart Infrastructure", image: customer_bial },
@@ -30,6 +31,7 @@ const partners = [
   { name: "HP", logo: partner_hp },
   { name: "Dell", logo: partner_dell },
   { name: "Samsung", logo: partner_samsung },
+  { name: "Versa", logo: partner_versa },
 ];
 
 export default function ClientsPartners() {
@@ -42,31 +44,31 @@ export default function ClientsPartners() {
         id="customers"
         className="relative bg-gray-50 px-6 py-12 font-[Poppins]"
       >
-        <div className="max-w-6xl mx-auto w-full">
-          <div className="text-center space-y-2 mb-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <div className="w-full max-w-6xl mx-auto">
+          <div className="mb-6 space-y-2 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
               Our <span className="text-red-600">Clients</span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto text-gray-600">
               We support ambitious organizations that demand reliable, scalable infrastructure.
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-red-50 via-white to-red-50 shadow-lg shadow-black/10">
-            <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none" />
+          <div className="relative overflow-hidden shadow-lg rounded-2xl bg-gradient-to-r from-red-50 via-white to-red-50 shadow-black/10">
+            <div className="absolute top-0 left-0 w-12 h-full pointer-events-none bg-gradient-to-r from-gray-50 to-transparent" />
+            <div className="absolute top-0 right-0 w-12 h-full pointer-events-none bg-gradient-to-l from-gray-50 to-transparent" />
 
-            <div className="marquee-track gap-8 items-center py-4 px-2">
+            <div className="items-center gap-8 px-2 py-4 marquee-track">
               {marqueeCustomers.map((customer, index) => (
                 <motion.div
                   key={`${customer.name}-${index}`}
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center justify-center w-64 h-40 shrink-0 rounded-xl overflow-hidden shadow-md shadow-black/10 bg-transparent"
+                  className="flex items-center justify-center w-64 h-40 overflow-hidden bg-transparent shadow-md shrink-0 rounded-xl shadow-black/10"
                 >
                   <img
                     src={customer.image}
                     alt={customer.name}
-                    className="w-full h-full object-contain"
+                    className="object-contain w-full h-full"
                   />
                 </motion.div>
               ))}
@@ -79,31 +81,31 @@ export default function ClientsPartners() {
         id="partners"
         className="relative bg-white px-6 py-12 font-[Poppins]"
       >
-        <div className="max-w-6xl mx-auto w-full">
-          <div className="text-center space-y-2 mb-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <div className="w-full max-w-6xl mx-auto">
+          <div className="mb-6 space-y-2 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
               Our <span className="text-red-600">Partners</span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto text-gray-600">
               Strategic allies that help us deliver seamless, modern network experiences.
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-red-50 via-white to-red-50 shadow-lg shadow-black/10">
-            <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+          <div className="relative overflow-hidden shadow-lg rounded-2xl bg-gradient-to-r from-red-50 via-white to-red-50 shadow-black/10">
+            <div className="absolute top-0 left-0 w-12 h-full pointer-events-none bg-gradient-to-r from-white to-transparent" />
+            <div className="absolute top-0 right-0 w-12 h-full pointer-events-none bg-gradient-to-l from-white to-transparent" />
 
-            <div className="marquee-track gap-8 items-center py-4 px-2">
+            <div className="items-center gap-8 px-2 py-4 marquee-track">
               {marqueePartners.map((partnerItem, index) => (
                 <motion.div
                   key={`${partnerItem.name}-${index}`}
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center justify-center w-64 h-40 shrink-0 rounded-xl overflow-hidden shadow-md shadow-black/10 bg-transparent"
+                  className="flex items-center justify-center w-64 h-40 overflow-hidden bg-transparent shadow-md shrink-0 rounded-xl shadow-black/10"
                 >
                   <img
                     src={partnerItem.logo}
                     alt={partnerItem.name}
-                    className="w-full h-full object-contain"
+                    className="object-contain w-full h-full"
                   />
                 </motion.div>
               ))}
