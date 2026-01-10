@@ -9,7 +9,7 @@ import amcImage from "../assets/amc.jpg";
 import cablesImage from "../assets/cables.jpg";
 import serversImage from "../assets/servers.jpg";
 import itImage from "../assets/it.jpg";
-import corporateImage from "../assets/corporateGifting.jpg";
+import productsImage from "../assets/InformationTechnology.jpg";
 
 const SCROLL_OFFSET = 120; // px offset for the fixed navbar
 
@@ -92,14 +92,14 @@ const services = [
     ],
   },
   {
-    id: "corporate-gifting",
-    title: "Corporate Gifting",
-    image: corporateImage,
+    id: "it-products",
+    title: "IT Products",
+    image: productsImage,
     desc: [
-      "Thoughtfully curated gifting solutions for clients, partners, and teams.",
-      "Tech-forward hampers, premium essentials, and customized bundles that align with your brand.",
-      "End-to-end fulfillment, including branding, packaging, and doorstep delivery.",
-      "Make every occasion memorable while reinforcing lasting relationships.",
+      "Reliable IT products and accessories to equip modern workspaces.",
+      "From peripherals to networking essentials, curated for performance and durability.",
+      "Sourcing support and recommendations based on your use case and budget.",
+      "Consistent availability and delivery support for teams of any size.",
     ],
   },
 ];
